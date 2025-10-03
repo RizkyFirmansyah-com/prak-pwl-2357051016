@@ -9,16 +9,15 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-   public function up(): void
-{
-    Schema::create('mata_kuliah', function (Blueprint $table) {
-        $table->uuid('id')->primary();
-        $table->string('nama_mk', 100);
-        $table->integer('sks');
-        $table->timestamps();
-    });
-}
-
+    public function up(): void
+    {
+        Schema::create('mata_kuliah', function (Blueprint $table) {
+            $table->uuid('id');
+            $table->string('nama_mk');
+            $table->integer('sks');
+            $table->timestamps();
+        });
+    }
 
     /**
      * Reverse the migrations.
